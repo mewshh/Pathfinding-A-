@@ -8,6 +8,8 @@ public class Grid : MonoBehaviour
     public Vector2 gridWorldSize;
     public float nodeRadius;
 
+    public int MaxSize { get { return gridSizeX * gridSizeY; } }
+
     float nodeDiameter;
     int gridSizeX, gridSizeY;
 
