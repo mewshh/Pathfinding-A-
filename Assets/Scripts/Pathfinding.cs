@@ -66,10 +66,14 @@ public class Pathfinding : MonoBehaviour
                     neighbour.hCost = GetDistance(neighbour, targetNode);
                     neighbour.parent = currentNode;
 
-                    if (!openSet.Contains(neighbour))
-                    {
-                        openSet.Add(neighbour);
-                    }
+                        if (!openSet.Contains(neighbour))
+                        {
+                            openSet.Add(neighbour);
+                        }
+                        else
+                        {
+                            openSet.UpdateItem(neighbour);
+                        }
                 }
             }
         }
